@@ -1,3 +1,4 @@
+/*
 package programmer.zaman.now.data;
 
 public record LoginRequest(String username, String password) {
@@ -15,3 +16,4 @@ public record LoginRequest(String username, String password) {
   }
 
 }
+*/

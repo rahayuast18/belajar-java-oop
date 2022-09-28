@@ -1,3 +1,4 @@
+/*
 package programmer.zaman.now.application;
 
 import programmer.zaman.now.annotation.Fancy;
@@ -28,3 +29,4 @@ public class ValidationApp {
 
   }
 }
+*/
