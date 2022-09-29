@@ -1,11 +1,12 @@
 package latihan;
 
 class Manager extends Employee{
-//    String name;
+//    String name; //udah gadipake karna ambil dari Employee
+    String company;
+
     Manager(String name) {
         super(name);
     }
-    String company;
 
     String setCompany() {
         return this.company = "Indocyber";
