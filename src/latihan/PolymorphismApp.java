@@ -1,6 +1,6 @@
 package latihan;
 
-class PolymorphismApp {
+public class PolymorphismApp {
     public static void main(String[] args) {
         Employee employee = new Employee("Ajeng");
         /**
