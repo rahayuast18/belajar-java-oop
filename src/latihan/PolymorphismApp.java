@@ -10,5 +10,14 @@ public class PolymorphismApp {
 
         employee = new VicePresident("Ajeng");
         employee.sayHello("Hani");
+
+        sayHello(new Employee("Rahayu"));
+        sayHello(new Manager("Puji"));
+        sayHello(new VicePresident("Astuty"));
+
+    }
+
+    static void sayHello(Employee employee) {
+        System.out.println("Hi " + employee.name);
     }
 }
