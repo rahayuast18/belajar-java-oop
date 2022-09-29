@@ -1,24 +1,16 @@
 package latihan;
 
 class VicePresident extends Manager {
-    /**
-     * karena di parent ada constructor, maka di child harus dipanggil walaupun diisi null
-     *
-     * @param company
-     */
-    VicePresident(String company) {
-        super(company);
-    }
-
     public static void main(String[] args) {
         /**
          * how to access parent & child
          */
-        var manager = new Manager("Indocyber");
+        var manager = new Manager();
         manager.name = "Arum";
         manager.sayHello("Denanda");
+        System.out.println(manager.setCompany());
 
-        var vicePresident = new VicePresident("Anteraja");
+        var vicePresident = new VicePresident();
         vicePresident.name = "Jerry";
         /**
          * jika tidak ada sayHello pada class VicePresident -> yang ditampilkan adalah method dari manager
@@ -26,9 +18,7 @@ class VicePresident extends Manager {
          */
         vicePresident.sayHello("Denanda");
 
-        /**
-         * how to call & use super constructor
-         */
+        // calling super method & this method
         vicePresident.sayName("Ayu");
     }
 
@@ -36,7 +26,15 @@ class VicePresident extends Manager {
         System.out.println("Hello " + name + ", I'm VP " + this.name);
     }
 
+    /**
+     * super method
+     * @param name
+     */
     void sayName(String name) {
-        System.out.println("Hello " + name + ", I'm from " + super.company + " and he's from " + this.company);
+        System.out.println("Hello " + name + ", I'm from " + super.setCompany() + " and he's from " + this.setCompany());
+    }
+
+    String setCompany(){
+        return this.company = "Anteraja";
     }
 }

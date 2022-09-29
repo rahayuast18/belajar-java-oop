@@ -3,8 +3,9 @@ package latihan;
 class Manager {
     String name;
     String company;
-    Manager(String company) {
-        this.company = company;
+
+    String setCompany() {
+        return this.company = "Indocyber";
     }
 
     void sayHello(String name) {
