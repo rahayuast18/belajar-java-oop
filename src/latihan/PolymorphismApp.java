@@ -18,6 +18,18 @@ public class PolymorphismApp {
     }
 
     static void sayHello(Employee employee) {
-        System.out.println("Hi " + employee.name);
+        /**
+         * kesimpulan sotoy:
+         * karena vicePresident child dari manager -> maka kondisi if dibuat duluan (soalnya kalo yang duluan Manager, fungsinya nda jalan dgn ok
+         */
+        if (employee instanceof VicePresident) {
+            VicePresident vicePrecident = (VicePresident) employee; // konversi Employee employee ke VicePrecident vicePrecident
+            System.out.println("Hi VP " + vicePrecident.name);
+        } else if (employee instanceof Manager) {
+            Manager manager = (Manager) employee; // konversi Employee employee ke Manager manager
+            System.out.println("Hi Manager " + manager.name);
+        } else {
+            System.out.println("Hi " + employee.name);
+        }
     }
 }
