@@ -1,7 +1,10 @@
 package latihan;
 
-class Manager {
-    String name;
+class Manager extends Employee{
+//    String name;
+    Manager(String name) {
+        super(name);
+    }
     String company;
 
     String setCompany() {

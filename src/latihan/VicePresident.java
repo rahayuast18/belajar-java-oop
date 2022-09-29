@@ -1,16 +1,19 @@
 package latihan;
 
 class VicePresident extends Manager {
+    VicePresident(String name) {
+        super(name);
+    }
     public static void main(String[] args) {
         /**
          * how to access parent & child
          */
-        var manager = new Manager();
+        var manager = new Manager(null);
         manager.name = "Arum";
         manager.sayHello("Denanda");
         System.out.println(manager.setCompany());
 
-        var vicePresident = new VicePresident();
+        var vicePresident = new VicePresident(null);
         vicePresident.name = "Jerry";
         /**
          * jika tidak ada sayHello pada class VicePresident -> yang ditampilkan adalah method dari manager
